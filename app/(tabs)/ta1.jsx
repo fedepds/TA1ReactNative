@@ -29,7 +29,7 @@ export default function ListaTareas() {
   const eliminarTarea = useCallback(
     (id) => {
       setTareas((prevTareas) => prevTareas.filter((item) => item.id !== id));
-      setContadorTareas(contadorTareas - 1);
+      if (contadorTareas > 0) {setContadorTareas(contadorTareas - 1);}
     },
     [contadorTareas]
   );
